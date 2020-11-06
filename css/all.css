@@ -63,22 +63,64 @@ img{
   box-sizing: border-box;
 }
 
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px){
+    .container{
+        max-width: 690px;
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        max-width: 345px;
+    }
+}
+
+h2{
+  font-size: 48px;
+  line-height: 67px;  
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+@media (max-width: 992px){
+    h2{
+        font-size: 32px;
+        line-height: 45px;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 767px){
+    h2{
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+}
+
 /* navbar */
 .navbar{
     background-color: #AA0601;
-    height: 108px;
+    /* height: 108px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 88px;
+    padding: 30px 88px;
 }
 
 .menu{
     display: flex;
 }
 
-.menu > p {
+.menu > li > a {
     color: white;
+    text-decoration: none;
     font-size: 24px;
     line-height: 28px;
     padding: 0 32px;
@@ -86,9 +128,9 @@ img{
 
 @media (max-width: 992px) {
     .navbar{
-        padding: 0 39px;
+        padding: 30px 39px;
     }
-    .menu > p{
+    .menu > li > a {
         font-size: 20px;
         padding: 0 20px;
     }
@@ -114,7 +156,7 @@ img{
         width: 100%;
     }
 
-    .menu > p{
+    .menu > li {
         padding-top: 8px;
         padding-bottom: 8px;
         border: 1px solid white;
@@ -195,21 +237,16 @@ h1{
 
 .description > h2 {
     color: #650300;
-    font-size: 48px;
-    line-height: 67px;
-    font-weight: bold;
-    margin-bottom: 63px;
 }
 
 .description-detail{
     display: flex;
-    justify-content: center;
-    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .des{
-    max-width: 208px;
-    margin: 0 39px;
+    width: 22.97%;
 
 }
 
@@ -218,7 +255,7 @@ h1{
 }
 
 .des > img{
-    width: 100px;
+    max-width: 100px;
     height: 100px;
     margin-bottom: 39px;
 }
@@ -246,16 +283,15 @@ h1{
         padding: 40px 0 104px 0;
     }
     .description-detail{
+        padding: 0 30px;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     .des{
-        max-width: 237px;
-        margin: 0px 39px 40px 39px;
-    }
-    h2{
-        font-size: 32px;
-        line-height: 48px;
-        margin-bottom: 32px;
+        width: 39.13%;
+        /* margin: 0px 39px 40px 39px; */
+        /* margin-bottom: 39px; */
+        margin: 0 30px 39px 30px;
     }
     h3{
         font-size: 20px;
@@ -264,13 +300,11 @@ h1{
 }
 
 @media (max-width: 767px){
-    h2{
-        font-size: 24px;
-        line-height: 33px;
-        margin-bottom: 20px;
-    }
     .description{
         padding: 32px 0 52px 0;
+    }
+    .des{
+        width: 100%;
     }
 }
 
@@ -286,13 +320,8 @@ h1{
     align-items: center;
 }
 
-.glasses > h4{
+.glasses > h2{
     color: #650300;
-    font-size: 48px;
-    line-height: 67px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 60px;
 }
 
 .gla{
@@ -313,7 +342,7 @@ h1{
     margin: 0 30px;
 }
 
-.gla-text > p{
+.gla-text > h5{
     font-size: 48px;
     line-height: 63px;
     color: #AA0601;
@@ -329,18 +358,13 @@ h1{
    .glasses{
         padding: 40px 0 40px 0;
     } 
-    .glasses > h4{
-        font-size: 32px;
-        line-height: 45px;
-        margin-bottom: 32px;
-    }
     .gla{
         margin-bottom: 8px;
     }
     .gla-reverse{
         flex-direction: row;
     } 
-    .gla-text > p{
+    .gla-text > h5{
         font-size: 28px;
         line-height: 37px;
     }  
@@ -371,7 +395,7 @@ h1{
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .gla-text > p{
+    .gla-text > h5{
         color: white;
     }
     .gla-text > img{
@@ -385,19 +409,14 @@ h1{
 /* cobrand */
 .cobrand{
     background-image: url('../image/bg.png');
-    height: 743px;
+    /* height: 743px; */
     background-position: center center;
     background-size: cover;
     padding: 64px 0px 80px 0px;
 }
 
-.cobrand > h4{
+.cobrand > h2{
     color: white;
-    font-size: 48px;
-    line-height: 67px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 60px;
 }
 
 .cobrand-img{
@@ -412,7 +431,7 @@ h1{
     margin: 0 15px;
 }
 
-.co > .white-bg, h5{
+.co > .white-bg, .co > h5{
     position: absolute;
     top:50%;
     left: 50%;
@@ -426,13 +445,12 @@ h1{
 
 .white-bg{
     background-color: white;
-    z-index: 100;
     opacity: 0.5;
     width: 100%;
     height: 100%;
 }
 
-h5{
+.co > h5{
     font-family: Roboto;
     z-index: 200;
     color: #AA0601;
@@ -445,19 +463,12 @@ h5{
 
 @media (max-width: 992px) {
     .cobrand{
-        height: 437px;
         padding: 40px 0px;
     }  
     .co{
         max-width: 330px;
-        /* max-height: 280px; */
     }
-    .cobrand > h4{
-        font-size: 32px;
-        line-height: 45px;
-        margin-bottom: 32px;
-    }
-    h5{
+    .co > h5{
         font-size: 32px;
         line-height: 43px;
     }
@@ -465,14 +476,8 @@ h5{
 
 @media (max-width: 767px) {
     .cobrand{
-        height: auto;
         padding: 32px 0px;
     }  
-    .cobrand > h4{
-        font-size: 20px;
-        line-height: 28px;
-        margin-bottom: 20px;
-    }
     .cobrand-img{
         flex-direction: column;
         align-items: center;
@@ -487,24 +492,21 @@ h5{
 .recommend{
     padding: 64px 0;
 }
-.recommend > h4{
-    font-size: 48px;
-    line-height: 67px;
-    text-align: center;
+.recommend > h2{
     color: #650300;
-    margin-bottom: 60px;
 }
 .recommend-customer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .rec{
-    max-width: 255px;
-    margin: 0 15px 29px 15px;
+    width: 22.97%;
+    /* margin: 0 15px 29px 15px; */
 }
+
 .rec-img{
-    width: 255px;
+    max-width: 100%;
     height: 256px;
 }
 .rec-img > img{
@@ -537,12 +539,11 @@ h5{
         padding: 40px 0;
     }
     .rec{
-        max-width: 330px;
-        margin: 0 15px 29px 15px;
+        width: 47.82%;
+        margin-bottom: 29px;
     }
     .rec-img{
-        width: 330px;
-        height: 256px;
+        max-width: 330px;
     }
     .rec-text{
         padding-top: 16px;
@@ -554,12 +555,11 @@ h5{
         padding: 32px 0;
     }
     .rec{
-        max-width: 345px;
+        width: 100%;
         margin-bottom: 16px;
     }
     .rec-img{
-        width: 345px;
-        height: 259px;
+        max-width: 345px;
     }
 }
 
@@ -570,17 +570,11 @@ h5{
 }
 
 .contactus-inside{
-    max-width: 730px;
     margin: 0 auto;
-    /* display: flex;
-    flex-direction: column; */
 }
 
-.contactus-inside > h4{
-    font-size: 48px;
-    line-height: 67px;
-    margin-bottom: 24px;
-    text-align: center;
+.contactus-inside > h2{
+    color: black;
 }
 
 .contactus-inside > p{
@@ -642,17 +636,11 @@ input[checkbox]{
     .contactus{
         padding: 40px 0;
     }
-    .contactus-inside{
-        max-width: 66.67%;
-    }
 }
 
 @media (max-width: 767px){
     .contactus{
         padding-top: 32px;
-    }
-    .contactus-inside{
-        max-width: 92%;
     }
 }
 
@@ -669,7 +657,8 @@ input[checkbox]{
 }
 
 .footer-top{
-    width: 70%;
+    /* width: 70%; */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid white;
@@ -699,11 +688,12 @@ input[checkbox]{
     margin-bottom: 7px;
 }
 
-.contact > p{
+.contact > a{
     font-size: 36px;
     line-height: 48px;
     color: white;
     margin-left: 17px;
+    text-decoration: none;
     /* margin-bottom: 17px; */
 }
 
@@ -715,7 +705,8 @@ input[checkbox]{
 }
 
 .footer-bottom{
-    width: 70%;
+    width: 100%;
+    /* width: 70%; */
     display: flex;
     padding-top: 20px;
     align-items: center;
@@ -734,26 +725,24 @@ input[checkbox]{
     display: flex;
 }
 
-.bottom-detail > p{
+.bottom-detail > li{
     padding: 16px;
 }
 
+.bottom-detail > li > a{
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 992px){
-    .footer-top {
-        width: 85%;
-    }
-    .footer-icons > img, .contact > img{
+    .footer-icons > li > img, .contact > img{
         width: 24px;
         height: 24px;
     }
-    .contact > p {
+    .contact > a {
         font-size: 20px;
         line-height: 26px;
     }
-    .footer-bottom {
-        width: 85%;
-    }
-    
     .footer-bottom > img {
         display: none;
     }
@@ -775,11 +764,15 @@ input[checkbox]{
     .footer-menu {
         display: none;
     }
+    .contact > a {
+        font-size: 16px;
+        line-height: 21px;
+    }
     .bottom-text, .bottom-detail{
         flex-direction: column;
         align-items: flex-start;
     }
-    .bottom-detail > p, .bottom-text > p {
+    .bottom-detail > li, .bottom-text > p {
         padding: 7px 0;;
         font-size: 14px;
         line-height: 20px;
